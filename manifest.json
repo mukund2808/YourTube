@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "YourTube",
+  "version": "1.0",
+  "description": "Filter and control YouTube content based on personalized keywords and channels.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "YourTube",
+    "default_icon": {
+      "16": "assets/logo16.png",
+      "48": "assets/logo48.png",
+      "128": "assets/logo128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/logo16.png",
+    "48": "assets/logo48.png",
+    "128": "assets/logo128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "options_page": "options/options.html",
+  "host_permissions": ["*://*.youtube.com/*"]
+}

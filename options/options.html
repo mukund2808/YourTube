@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Filtering Preferences</title>
+    <link rel="stylesheet" href="options.css">
+    <!-- Include Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dark-container">
+        <!-- Left Section for Spaces -->
+        <aside class="spaces-section">
+            <h2>Your Spaces</h2>
+            <div id="spaces-container"></div>
+            <button class="add-space-btn" id="add-space">Add More</button>
+        </aside>
+
+        <!-- Right Section for Keywords and Channels -->
+        <main class="content-section">
+            <section class="combined-section">
+                <!-- Keywords Section -->
+                <div class="keywords-section">
+                    <h3>Keywords</h3>
+                    <div class="input-container">
+                        <input type="text" placeholder="Add Keywords to Filter" id="keyword-input" aria-autocomplete="list" aria-controls="keyword-suggestions" aria-expanded="false">
+                        <div id="keyword-suggestions" class="suggestions" role="listbox"></div>
+                    </div>
+                    <div id="selected-keywords" class="selected-items"></div>
+                    <button id="save-keywords-btn" class="save-btn">Save Changes</button>
+                    <button id="clear-keywords-btn" class="clear-btn">Clear All</button>
+                </div>
+
+                <!-- Divider Line -->
+                <div class="divider"></div>
+                
+                <!-- Channels Section -->
+                <div class="channels-section">
+                    <h3>Channels</h3>
+                    <div class="input-container">
+                        <input type="text" placeholder="Search your favorite YouTube channels..." id="channel-input" aria-autocomplete="list" aria-controls="channel-suggestions" aria-expanded="false">
+                        <div id="channel-suggestions" class="suggestions" role="listbox"></div>
+                    </div>
+                    <div id="selected-channels" class="selected-items"></div>
+                    <button id="save-channels-btn" class="save-btn">Save Changes</button>
+                    <button id="clear-channels-btn" class="clear-btn">Clear All</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Logo Section -->
+    <!-- <div class="logo-container">
+        <img src="yourTube_logo.png" alt="Logo" class="logo-image">
+    </div>
+     -->
+
+    <!-- Footer Text -->
+    <div class="footer-text">
+        <span id="creator-name">created by <u id="hover-text">Mukund Sharma</u></span>
+    </div>
+
+    
+
+    <script src="options.js"></script>
+</body>
+</html>

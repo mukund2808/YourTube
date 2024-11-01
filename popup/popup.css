@@ -1,0 +1,139 @@
+/* Reset and Layout Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 280px; /* Reduced from 320px */
+    height: 180px;
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; /* Now 280px */
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 20px; /* Reduced size */
+    height: auto;
+    margin-right: 8px;
+}
+
+h1 {
+    font-size: 18px; /* Reduced size */
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+    flex: 1;
+}
+
+/* Toggle Section */
+.toggle-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toggle-label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+#status-text {
+    margin-right: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px; /* Reduced size */
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Adjusted */
+    width: 20px; /* Adjusted */
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(21px); /* Adjusted for new switch size */
+}
+
+/* Settings Button */
+#settings-btn {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #6B5CE7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: auto;
+}
+
+#settings-btn:hover {
+    background-color: #6c5ce7;
+}

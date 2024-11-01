@@ -1,0 +1,362 @@
+/* Base Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Dark Container */
+.dark-container {
+    display: flex;
+    gap: 1.5em;
+    max-width: 800px;
+    width: 90%;
+}
+
+/* Spaces Section */
+.spaces-section {
+    background-color: #2a2a2a;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.spaces-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#spaces-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    width: 100%;
+}
+
+/* Space Item Styling */
+.space-item {
+    background: #3a3a3a;
+    padding: 0.8em;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #bfbfbf;
+    font-size: 1em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.space-item.active {
+    background-color: #636363;
+    color: #ffffff;
+}
+
+.space-item:hover {
+    background-color: #555;
+}
+
+.space-item .icon-container {
+    display: flex;
+    gap: 8px;
+    visibility: hidden;
+    transition: visibility 0.2s ease-in-out;
+}
+
+.space-item:hover .icon-container {
+    visibility: visible;
+}
+
+/* Icon Container Styles */
+.icon-container .icon {
+    cursor: pointer;
+    color: #bfbfbf;
+    transition: color 0.2s ease;
+}
+
+.icon-container .icon:hover {
+    color: #ffffff;
+}
+
+.icon-container .icon svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Add Space Button */
+.add-space-btn {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 0.8em;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.9em;
+    margin-top: 1em;
+    transition: background-color 0.2s;
+    width: 100%;
+    text-align: center;
+}
+
+.add-space-btn:hover {
+    background-color: #4834d4;
+}
+
+/* Content Section */
+.content-section {
+    background-color: #2a2a2a;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Combined Section for Keywords and Channels */
+.combined-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Keywords and Channels Section */
+.keywords-section,
+.channels-section {
+    padding: 1em;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.keywords-section h3,
+.channels-section h3 {
+    margin-top: 0;
+}
+
+/* Divider Styling */
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #555;
+    margin: 1em 0;
+}
+
+/* Input Container Styling */
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]::placeholder {
+    color: #b0b0b0;
+}
+
+input[type="text"]:focus {
+    border-color: #6c5ce7;
+}
+
+/* Selected Items */
+.selected-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.selected-item-pill {
+    background: #4a4a4a;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.selected-item-pill .tag-close {
+    margin-left: 0.5em;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ff7675;
+}
+
+/* Suggestions Box */
+.suggestions {
+    position: absolute;
+    top: calc(100% + 0.3em);
+    left: 0;
+    right: 0;
+    background: #2a2a2a;
+    border: 1px solid #555;
+    border-radius: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.suggestions.show {
+    display: block;
+}
+
+.suggestions .loading {
+    padding: 8px;
+    color: #b0b0b0;
+    text-align: center;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    color: #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.suggestion-active {
+    background-color: #6c5ce7;
+    color: #fff;
+}
+
+
+
+.suggestion-thumbnail {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.suggestion-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestion-title {
+    flex-grow: 1;
+}
+
+.suggestion-subscribers {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.no-suggestion {
+    color: #b0b0b0;
+    cursor: default;
+    padding: 8px;
+    text-align: center;
+}
+
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.footer-text u {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-text u:hover {
+    text-decoration: underline;
+}
+
+/* Logo styling */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo-image {
+    width: 40px; /* Adjust the size as needed */
+    height: auto;
+}
+
+
+/* Buttons */
+.save-btn,
+.clear-btn {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.save-btn {
+    background-color: #6c5ce7;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #4834d4;
+}
+
+.clear-btn {
+    background-color: #ff7675;
+    color: #fff;
+}
+
+.clear-btn:hover {
+    background-color: #d63031;
+}
+
+/* Scrollbar Styling */
+.suggestions::-webkit-scrollbar {
+    width: 8px;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.suggestions::-webkit-scrollbar-thumb:hover {
+    background-color: #444;
+}
