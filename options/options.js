@@ -1,8 +1,9 @@
 // options.js
 
 // Note: Replace 'YOUR_API_KEY' with your actual API key, and consider storing it securely.
-const API_KEY = '***REMOVED***';
+const API_KEY = 'Your API key';
 
+//"AIzaSyDDKJXWJM24uqlknUuwnnmIdTqEYV7_MLvDkAXaA"
 
 let spaces = {};
 let activeSpace = "Technical";
