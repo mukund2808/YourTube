@@ -24,11 +24,12 @@ An innovative browser extension that enhances your YouTube experience with custo
 
 ## Features
 
-- **Ad-Free Viewing**: Automatically skip ads for uninterrupted content.
-- **Custom Themes**: Switch between dark and light modes or create your own theme.
-- **Playback Control**: Adjust playback speed beyond the default options.
-- **Enhanced Search**: Advanced search filters to find videos more efficiently.
-- **Keyboard Shortcuts**: Customize shortcuts for quick navigation.
+- **Real-Time Filtering:** Uses MutationObserver to manage YouTube’s infinite scroll dynamically.
+- **Advanced Keyword Filtering:** Employs regex for precise, personalized control over content.
+- **Optimized YouTube API Integration:** Targets relevant content while minimizing API usage.
+- **Cross-Device Syncing:** Utilizes chrome.storage.sync for a consistent experience across devices.
+- **Debounced Storage Updates:** Enables real-time toggling without performance issues.
+- **Customizable Spaces:** Create multiple spaces (like “Work” and “Learning”) to personalize filters for different needs.
 
 ---
 
